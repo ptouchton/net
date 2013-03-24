@@ -5,14 +5,14 @@
       {
           this.balloonsList.Visible = true;
           this.trainsList.Visible = false;
-          this.stage.Visible = false;
+          this.storyContent.Visible = false;
       }
 
       void Linktrains_Click(Object sender, EventArgs e)
       {
           this.balloonsList.Visible = false;
           this.trainsList.Visible = true;
-          this.stage.Visible = false;
+          this.storyContent.Visible = false;
 
       }
 
@@ -20,7 +20,7 @@
       {
           this.balloonsList.Visible = false;
           this.trainsList.Visible = false;
-          this.stage.Visible = true;
+          this.storyContent.Visible = true;
 
       }
 
@@ -32,18 +32,32 @@
         {
             height: 400px;
             width: 600px;  
+            
         }
-        
+        div.zone
+        {
+            width: 200px;
+            
+        }
         .myStoriesLink
         {
             padding-bottom: 25px;    
+        }
+        .cropped
+        {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
   <div id="main">
     <div id="left" style="float: Left; width: 20%">
-        <asp:Image runat="server" ImageUrl="../pics/jake.jpg" Height="75px"/>       <asp:LinkButton CssClass="myStoriesLink" runat="server" ID="linkMyStories" OnClick="LinkMyStories_Click">My Stories</asp:LinkButton>
+        <asp:Image runat="server" ImageUrl="../pics/jake.jpg" Height="75px"/><asp:LinkButton CssClass="myStoriesLink" runat="server" ID="linkMyStories" OnClick="LinkMyStories_Click">My Stories</asp:LinkButton>
 
         <p>My Name is</p>
         <asp:Literal runat="server" ID="readerName">Jacob</asp:Literal>
@@ -56,7 +70,7 @@
          <asp:LinkButton runat="server" ID="linkBoats">Fishing Boats</asp:LinkButton>
        </div>
     </div>
-    <div id="content" runat="server">
+    <div id="content" style="float: left" runat="server">
        <div id="balloonsList" runat="server" Visible="False">
         <asp:LinkButton runat="server" OnClientClick="javascript:window.open('http://www.youtube.com/watch?v=QqAJWCb74Uo')">2011 Gulf Coast Hot Air Balloon Festival Official Video</asp:LinkButton></br>
         <asp:LinkButton runat="server" OnClientClick="javascript:window.open('https://www.google.com/search?q=pictures+of+hot+air+balloons&hl=en&tbm=isch&tbo=u&source=univ&sa=X&ei=A0pOUcSgCKTC2QXyiIC4Bw&ved=0CC4QsAQ&biw=1280&bih=687')">Balloon pictures</asp:LinkButton>
@@ -64,11 +78,20 @@
        <div id="trainsList" runat="server" Visible="False">
         <asp:LinkButton ID="LinkButton1" runat="server" OnClientClick="javascript:window.open('http://www.youtube.com/watch?v=FKTHDrCnyzI')">Kids Love Trains Video</asp:LinkButton></br>
         <asp:LinkButton ID="LinkButton2" runat="server" OnClientClick="javascript:window.open('https://www.google.com/search?q=train+pictures&hl=en&tbm=isch&tbo=u&source=univ&sa=X&ei=Qk5OUeuMKYjqqAH-mYC4DA&ved=0CDEQsAQ&biw=1280&bih=687')">Train pictures</asp:LinkButton>
+       </div> 
+       <div id="storyContent" runat="server" Visible="False" style="width: 730px">
+        <div style="width: 50px; height: 400px; float: left;position: relative;margin-left: auto;margin-right: auto;overflow: hidden;">
+          <asp:Image ID="Image1" runat="server" ImageUrl="../img/prev.png" CssClass="cropped" Height="50px" Width="50px"/>       
+        </div>   
+        <div id="stage" runat="server" class="stage" style="float: left">
+               <div id="zone1" class="stage zone" style="float: left; background-color: blue">1</div>
+               <div id="zone2" class="stage zone" style="float: left; background-color: greenyellow">2</div>
+               <div id="zone3" class="stage zone" style="float: left; background-color: rosybrown">3</div>
+        </div>
+        <div style="width: 50px; height: 400px; float: left;position: relative;margin-left: auto;margin-right: auto;overflow: hidden;">
+            <asp:Image runat="server" ImageUrl="../img/next.png" CssClass="cropped" Height="50px" Width="50px"/>
+        </div>
        </div>
-       <div id="stage" runat="server" Visible="False" class="stage">
-           test
-       </div>
-    </div>
-</div> 
+   </div> 
 </asp:Content>
 
