@@ -62,6 +62,7 @@
     <Content Include="pages\DavidStories.aspx" />
     <Content Include="pages\JacobStories.aspx" />
     <Content Include="pages\TesstJason.txt" />
+    <Content Include="pics\david.jpg" />
     <Content Include="pics\jake.jpg" />
     <Content Include="pics\mine.jpg" />
     <Content Include="Styles\Site.css" />

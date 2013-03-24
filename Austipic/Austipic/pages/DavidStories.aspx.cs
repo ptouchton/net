@@ -73,6 +73,8 @@ namespace Austipic.pages
         this.nextButton.Visible = true;
         this.CurrentScene = myStoryView.Scenes[this.NextScene].SequenceNumber;
 
+        var backgroundUrl = new Uri(StoryView.BaseUrl + "/" + StoryView.Scenes[this.NextScene].Background);
+        this.stage.Style.Add("BACKGROUND-IMAGE", backgroundUrl.ToString());
 
         //images
         this.zone1Img.ImageUrl = new Uri(StoryView.BaseUrl + "/" + StoryView.Scenes[this.NextScene].Zone[0]).ToString();
@@ -94,6 +96,9 @@ namespace Austipic.pages
         this.prevButton.Visible = true;
         this.nextButton.Visible = true;
         this.CurrentScene = myStoryView.Scenes[this.CurrentScene].SequenceNumber - 1;
+
+        var backgroundUrl = new Uri(StoryView.BaseUrl + "/" + StoryView.Scenes[this.CurrentScene - 1].Background);
+        this.stage.Style.Add("BACKGROUND-IMAGE", backgroundUrl.ToString());
 
         //images
         this.zone1Img.ImageUrl = new Uri(StoryView.BaseUrl + "/" + StoryView.Scenes[this.CurrentScene - 1].Zone[0]).ToString();
