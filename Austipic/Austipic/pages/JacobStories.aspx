@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MyStories.aspx.cs" Inherits="Austipic.pages.MyStories" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="JacobStories.aspx.cs" Inherits="Austipic.Jacob.JacobStories" %>
 <script language="C#" runat="server">
 
       void LinkBalloons_Click(Object sender, EventArgs e)
@@ -41,7 +41,8 @@
         }
         .myStoriesLink
         {
-            padding-bottom: 25px;    
+            padding-bottom: 25px;
+            margin-left: 5px;    
         }
         .cropped
         {
@@ -52,22 +53,28 @@
             right: 0;
             bottom: 0;
         }
+        .zone
+        {
+            overflow: hidden;
+            vertical-align: bottom; 
+            
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
   <div id="main">
     <div id="left" style="float: Left; width: 20%">
-        <asp:Image runat="server" ImageUrl="../pics/jake.jpg" Height="75px"/><asp:LinkButton CssClass="myStoriesLink" runat="server" ID="linkMyStories" OnClick="LinkMyStories_Click">My Stories</asp:LinkButton>
-
+        <asp:Image runat="server" ImageUrl="../pics/jake.jpg" Height="75px"/>
         <p>My Name is</p>
         <asp:Literal runat="server" ID="readerName">Jacob</asp:Literal>
+        
+        <p>My Stories</p>
+          <asp:LinkButton CssClass="myStoriesLink" runat="server" ID="linkMyStories" OnClick="LinkMyStories_Click">Going to the mall</asp:LinkButton>
         <p>I Like</p>
         <div style="margin-left: 5px">
-         <asp:LinkButton runat="server" ID="linkBalloons" OnClick="LinkBalloons_Click" >HotAir Balloons</asp:LinkButton>
+         <asp:LinkButton runat="server" ID="linkBalloons" OnClick="LinkBalloons_Click" >Hotair Balloons</asp:LinkButton>
          <br/>
          <asp:LinkButton runat="server" ID="linkTrains" OnClick="Linktrains_Click">Trains</asp:LinkButton>
-         <br/>
-         <asp:LinkButton runat="server" ID="linkBoats">Fishing Boats</asp:LinkButton>
        </div>
     </div>
     <div id="content" style="float: left" runat="server">
@@ -82,15 +89,15 @@
        <div id="storyContent" runat="server" Visible="False" style="width: 730px;">
         <span runat="server" id="storyTitle" style="font-weight: bold; color: #034af3"></span>   
         <div style="width: 50px; height: 400px; float: left;position: relative;margin-left: auto;margin-right: auto;overflow: hidden;">
-            <asp:ImageButton CssClass="cropped" Height="50px" ID="prevButton" ImageUrl="../img/prev.png" runat="server" Width="50px"/>       
+            <asp:ImageButton CssClass="cropped" Height="50px" ID="prevButton" OnClick="prevButton_OnClick" ImageUrl="../img/prev.png" runat="server" Width="50px"/>       
         </div>   
-        <div id="stage" runat="server" class="stage" style="float: left">
-               <div id="zone1" class="stage zone" style="float: left; background-color: blue">1</div>
-               <div id="zone2" class="stage zone" style="float: left; background-color: greenyellow">2</div>
-               <div id="zone3" class="stage zone" style="float: left; background-color: rosybrown">3</div>
+        <div id="stage" runat="server" class="stage" style="float: left;">
+               <div id="zone1" class="stage zone" style="float: left;" ><asp:Image CssClass="zone" runat="server" ID="zone1Img"/></div>
+               <div id="zone2" class="stage zone" style="float: left;"><asp:Image CssClass="zone" runat="server" ID="zone2Img"/></div>
+               <div id="zone3" class="stage zone" style="float: left;"><asp:Image CssClass="zone" runat="server" ID="zone3Img"/></div>
         </div>
         <div style="width: 50px; height: 400px; float: left;position: relative;margin-left: auto;margin-right: auto;overflow: hidden;">
-            <asp:ImageButton runat="server" ID="nextButton"  ImageUrl="../img/next.png"  OnClick="nextButton_Onclick" CssClass="cropped" Height="50px" Width="50px"/>
+            <asp:ImageButton runat="server" ID="nextButton"  ImageUrl="../img/next.png"  OnClick="nextButton_OnClick" CssClass="cropped" Height="50px" Width="50px"/>
         </div>
          <div runat="server" style="float: left; position: relative; margin-left: 65px; padding-top: 20px; font-size: 2em">
             <asp:Literal runat="server" id="storyText" ></asp:Literal>   

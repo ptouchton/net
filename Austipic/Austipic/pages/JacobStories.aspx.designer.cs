@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Austipic.pages {
+namespace Austipic.Jacob {
     
     
-    public partial class MyStories {
-        
-        /// <summary>
-        /// linkMyStories control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkMyStories;
+    public partial class JacobStories {
         
         /// <summary>
         /// readerName control.
@@ -29,6 +20,15 @@ namespace Austipic.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal readerName;
+        
+        /// <summary>
+        /// linkMyStories control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton linkMyStories;
         
         /// <summary>
         /// linkBalloons control.
@@ -47,15 +47,6 @@ namespace Austipic.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton linkTrains;
-        
-        /// <summary>
-        /// linkBoats control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkBoats;
         
         /// <summary>
         /// content control.
@@ -137,6 +128,33 @@ namespace Austipic.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl stage;
+        
+        /// <summary>
+        /// zone1Img control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image zone1Img;
+        
+        /// <summary>
+        /// zone2Img control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image zone2Img;
+        
+        /// <summary>
+        /// zone3Img control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image zone3Img;
         
         /// <summary>
         /// nextButton control.

@@ -1,0 +1,102 @@
+﻿            var zone = new string[3];
+            var uri = new Uri("http://images.v2.reserve123.com/product/5359-3.jpg");
+            zone[0] = uri.ToString();
+            zone[1] = "~/img/prev.png";
+            zone[2] = "~/img/prev.png";
+
+            uri = new Uri("http://ldsrr91.files.wordpress.com/2009/03/blue-sky.jpg");
+            var scene = new Scene
+                {
+                    Background = uri.ToString(),
+                    Sequence = 0,
+                    Text = "Bubba, it's time to go to the Walmart!",
+                    Zone = zone
+
+                };
+            var scene2 = new Scene
+                {
+                    Background = "~/img/prev.png",
+                    Sequence = 1,
+                    Text = "Bubba puts on his best pair of cutoffs!",
+                    Zone = zone
+                };
+            var scene3 = new Scene
+                {
+                    Background = "~/img/prev.png",
+                    Sequence = 2,
+                    Text = "Bubba looks at toys at the Walmart!",
+                    Zone = zone
+                };
+
+
+            var scenes = new Scene[3];
+            scenes[0] = scene;
+            scenes[1] = scene2;
+            scenes[2] = scene3;
+
+            var body = new Body[1];
+            body[0].Scenes = scenes;
+            var story = new CurrentStoryViewModel
+                {
+                    Keywords = "Bubba goes to walmart",
+                    Version  = 1,
+                    Title = "Bubba goes to walmart",
+                    BaseUrl = "http://resource.austipic.org/themename",
+                    Body = body,
+                     Levels = new int[]{1,2,3}
+
+                };
+
+            return story;
+
+
+
+{
+  "baseUrl":"http://resource.austipic.org/themename"
+    "title": "Test Story",
+    "keywords": "shopping, outing",
+    "version": 1,
+    "levels": [
+        1,
+        2,
+        3
+    ],
+    "body": [
+        {
+            "scene": {
+                "text": "This is the page 1 text.",
+                "sequenceNumber": 0,
+                "background": "background_1.png",
+                "zone": [
+                    "actor_1.png",
+                    "actor_2.png",
+                    "prop_1.png"
+                ]
+            }
+        },
+        {
+            "scene": {
+                "text": "This is the page 2 text.",
+                "sequenceNumber": 1,
+                "background": "background_2.png",
+                "zone": [
+                    "actor_1.png",
+                    "",
+                    "actor_3.png"
+                ]
+            }
+        },
+        {
+            "scene": {
+                "text": "This is the page 3 text.",
+                "sequenceNumber": 2,
+                "background": "background_3.png",
+                "zone": [
+                    "prop_2.png",
+                    "prop_3.png",
+                    "prop_4.png"
+                ]
+            }
+        }
+    ]
+    }
