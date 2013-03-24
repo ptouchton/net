@@ -92,6 +92,7 @@ first child of the left and right table columns */
     background-color: #fff;
     margin: 20px auto 0px auto;
     border: 1px solid #496077;
+    height: 650px;
 }
 
 .header
@@ -148,10 +149,7 @@ div.hideSkiplink
     width:100%;
 }
 
-div.menu submenu
-{
-    padding: 4px 0px 4px 8px;
-}
+
 div.menu
 {
     padding: 4px 0px 4px 785px;

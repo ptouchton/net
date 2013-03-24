@@ -1,19 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using Austipic;
 
 namespace Austipic.pages
 {
+
     public partial class MyStories : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        private const string storyViewStateKey = "storyViewStateKey";
+
+        private CurrentStoryViewModel StoryView
         {
+            get { return (CurrentStoryViewModel)this.ViewState[storyViewStateKey]; }
+
+            set { this.ViewState[storyViewStateKey] = value; }
+        }
+    
+    protected
+        void Page_Load 
+        (object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                this.StoryView = new StoryManager().GetStory();
+
+                //set first story board
+                this.storyTitle.InnerText = StoryView.Title;
+                this.storyText.Text = StoryView.Scenes[0].Text;
+                this.prevButton.Visible = false;
+
+            }
 
         }
 
-       
+    
+
     }
-}
+    }

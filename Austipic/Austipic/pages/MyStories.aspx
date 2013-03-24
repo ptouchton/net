@@ -79,9 +79,10 @@
         <asp:LinkButton ID="LinkButton1" runat="server" OnClientClick="javascript:window.open('http://www.youtube.com/watch?v=FKTHDrCnyzI')">Kids Love Trains Video</asp:LinkButton></br>
         <asp:LinkButton ID="LinkButton2" runat="server" OnClientClick="javascript:window.open('https://www.google.com/search?q=train+pictures&hl=en&tbm=isch&tbo=u&source=univ&sa=X&ei=Qk5OUeuMKYjqqAH-mYC4DA&ved=0CDEQsAQ&biw=1280&bih=687')">Train pictures</asp:LinkButton>
        </div> 
-       <div id="storyContent" runat="server" Visible="False" style="width: 730px">
+       <div id="storyContent" runat="server" Visible="False" style="width: 730px;">
+        <span runat="server" id="storyTitle" style="font-weight: bold; color: #034af3"></span>   
         <div style="width: 50px; height: 400px; float: left;position: relative;margin-left: auto;margin-right: auto;overflow: hidden;">
-          <asp:Image ID="Image1" runat="server" ImageUrl="../img/prev.png" CssClass="cropped" Height="50px" Width="50px"/>       
+            <asp:ImageButton CssClass="cropped" Height="50px" ID="prevButton" ImageUrl="../img/prev.png" runat="server" Width="50px"/>       
         </div>   
         <div id="stage" runat="server" class="stage" style="float: left">
                <div id="zone1" class="stage zone" style="float: left; background-color: blue">1</div>
@@ -89,8 +90,11 @@
                <div id="zone3" class="stage zone" style="float: left; background-color: rosybrown">3</div>
         </div>
         <div style="width: 50px; height: 400px; float: left;position: relative;margin-left: auto;margin-right: auto;overflow: hidden;">
-            <asp:Image runat="server" ImageUrl="../img/next.png" CssClass="cropped" Height="50px" Width="50px"/>
+            <asp:ImageButton runat="server" ID="nextButton"  ImageUrl="../img/next.png"  OnClick="nextButton_Onclick" CssClass="cropped" Height="50px" Width="50px"/>
         </div>
+         <div runat="server" style="float: left; position: relative; margin-left: 65px; padding-top: 20px; font-size: 2em">
+            <asp:Literal runat="server" id="storyText" ></asp:Literal>   
+         </div>
        </div>
    </div> 
 </asp:Content>

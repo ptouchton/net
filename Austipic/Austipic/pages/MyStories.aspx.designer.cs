@@ -112,13 +112,22 @@ namespace Austipic.pages {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl storyContent;
         
         /// <summary>
-        /// Image1 control.
+        /// storyTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl storyTitle;
+        
+        /// <summary>
+        /// prevButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton prevButton;
         
         /// <summary>
         /// stage control.
@@ -128,5 +137,23 @@ namespace Austipic.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl stage;
+        
+        /// <summary>
+        /// nextButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton nextButton;
+        
+        /// <summary>
+        /// storyText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal storyText;
     }
 }
